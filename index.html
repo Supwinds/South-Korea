@@ -21,6 +21,7 @@ async function saveProduct(){
 const name = document.querySelectorAll("input")[1].value;
 const brand = document.querySelectorAll("input")[2].value;
 const size = document.querySelectorAll("input")[3].value;
+const color = document.querSelectorAll("input")[4].value;
 
 
 const { data, error } = await supabaseClient
@@ -29,7 +30,8 @@ const { data, error } = await supabaseClient
 {
 name:name,
 brand:brand,
-size:size
+size:size,
+color:color
 }
 ]);
 
@@ -64,6 +66,9 @@ alert("新增成功");
 
 <label>尺寸：</label><br>
 <input type="text" placeholder="例如：M"><br><br>
+
+<label>顏色：</label><br>
+<input type="text" placeholder="例如：黑色"><br><br>
 
 <button type="button" onclick="saveProduct()">
 儲存
