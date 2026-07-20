@@ -4,7 +4,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>衣服管理系統</title>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+<script>
+
+const supabaseUrl = "https://vzoijtlwqkrswjwmjrtk.supabase.co/rest/v1/";
+const supabaseKey = "sb_publishable_SknocZPTbwvkpGvI1gps1g_eIvw3SEM";
+
+const supabaseClient = supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
+
+</script>
 <body>
 
 <h1>👕 衣服管理系統</h1>
