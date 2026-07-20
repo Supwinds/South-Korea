@@ -18,12 +18,19 @@ const supabaseClient = supabase.createClient(
   
 async function saveProduct(){
 
-alert("按鈕有執行");
+alert("開始新增");
 
 const name = document.querySelectorAll("input")[1].value;
 const brand = document.querySelectorAll("input")[2].value;
 const size = document.querySelectorAll("input")[3].value;
 const color = document.querySelectorAll("input")[4].value;
+
+alert(
+"name:" + name +
+"\nbrand:" + brand +
+"\nsize:" + size +
+"\ncolor:" + color
+);
 
 
 const { data, error } = await supabaseClient
@@ -39,7 +46,7 @@ color:color
 
 
 if(error){
-alert(error.message);
+alert("錯誤：" + error.message);
 console.log(error);
 }
 else{
